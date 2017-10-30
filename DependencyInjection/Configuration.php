@@ -81,6 +81,8 @@ class Configuration implements ConfigurationInterface
             'yandex',
             '37signals',
             'itembase',
+            'wechat',
+            'open_wechat',
         ),
         'oauth1' => array(
             'bitbucket',
