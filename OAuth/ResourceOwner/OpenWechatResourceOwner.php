@@ -76,21 +76,15 @@ class OpenWechatResourceOwner extends GenericOAuth2ResourceOwner
      */
     public function getUserInformation(array $accessToken = null, array $extraParameters = array())
     {
-        if ('unionid' === $this->paths['identifier']) {
-            $openid = $accessToken['openid'];
+        $openid = $accessToken['openid'];
 
-            $url = $this->normalizeUrl($this->options['infos_url'], array(
-                'access_token' => $accessToken['access_token'],
-                'openid' => $openid,
-            ));
+        $url = $this->normalizeUrl($this->options['infos_url'], array(
+            'access_token' => $accessToken['access_token'],
+            'openid' => $openid,
+        ));
 
-            $response = $this->doGetUserInformationRequest($url);
-            $content = $this->getResponseContent($response);
-        } else {
-            $content = array(
-                'openid' => $accessToken['openid'],
-            );
-        }
+        $response = $this->doGetUserInformationRequest($url);
+        $content = $this->getResponseContent($response);
 
         $this->validateResponseContent($content);
 
