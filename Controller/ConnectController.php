@@ -293,7 +293,7 @@ class ConnectController extends Controller
                     $session->set($sessionKeyFailure, $targetUrl);
                 }
 
-                if ($this->container->getParameter('hwi_oauth.use_referer') && !$session->has($sessionKey) && ($targetUrl = $request->headers->get('Referer')) && $targetUrl !== $authorizationUrl) {
+                if ($this->container->getParameter('hwi_oauth.use_referer') && ($targetUrl = $request->headers->get('Referer')) && $targetUrl !== $authorizationUrl) {
                     $session->set($sessionKey, $targetUrl);
                 }
             }
