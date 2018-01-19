@@ -79,6 +79,7 @@
         <parameter key="hwi_oauth.resource_owner.itembase.class">HWI\Bundle\OAuthBundle\OAuth\ResourceOwner\ItembaseResourceOwner</parameter>
         <parameter key="hwi_oauth.resource_owner.wechat.class">HWI\Bundle\OAuthBundle\OAuth\ResourceOwner\WechatResourceOwner</parameter>
         <parameter key="hwi_oauth.resource_owner.open_wechat.class">HWI\Bundle\OAuthBundle\OAuth\ResourceOwner\OpenWechatResourceOwner</parameter>
+        <parameter key="hwi_oauth.resource_owner.uum3d.class">HWI\Bundle\OAuthBundle\OAuth\ResourceOwner\Uum3dResourceOwner</parameter>
 
         <parameter key="hwi_oauth.resource_ownermap.class">HWI\Bundle\OAuthBundle\Security\Http\ResourceOwnerMap</parameter>
         <parameter key="hwi_oauth.security.oauth_utils.class">HWI\Bundle\OAuthBundle\Security\OAuthUtils</parameter>

@@ -89,6 +89,7 @@ class OAuthProvider implements AuthenticationProviderInterface
         $resourceOwner = $this->resourceOwnerMap->getResourceOwnerByName($token->getResourceOwnerName());
 
         $oldToken = $token->isExpired() ? $this->refreshToken($token, $resourceOwner) : $token;
+
         $userResponse = $resourceOwner->getUserInformation($oldToken->getRawToken());
 
         try {

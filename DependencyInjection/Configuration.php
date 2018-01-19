@@ -83,6 +83,7 @@ class Configuration implements ConfigurationInterface
             'itembase',
             'wechat',
             'open_wechat',
+            'uum3d',
         ),
         'oauth1' => array(
             'bitbucket',

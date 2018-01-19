@@ -67,7 +67,7 @@ class OAuthToken extends AbstractToken
 
         $this->setRawToken($accessToken);
 
-        parent::setAuthenticated(true);
+        parent::setAuthenticated(count($roles) > 0);
     }
 
     /**
