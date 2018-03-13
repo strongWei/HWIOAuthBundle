@@ -269,7 +269,8 @@ class ConnectController extends Controller
     public function redirectToServiceAction(Request $request, $service)
     {
         try {
-            $authorizationUrl = $this->container->get('hwi_oauth.security.oauth_utils')->getAuthorizationUrl($request, $service);
+            $redirectUrl = $request->query->get('redirectUrl', null);
+            $authorizationUrl = $this->container->get('hwi_oauth.security.oauth_utils')->getAuthorizationUrl($request, $service, $redirectUrl);
         } catch (\RuntimeException $e) {
             throw new NotFoundHttpException($e->getMessage(), $e);
         }
